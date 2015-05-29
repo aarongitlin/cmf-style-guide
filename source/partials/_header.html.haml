@@ -1,29 +1,17 @@
-%header
-  .top-bar
-    .wrapper
-      .row
-        .logo
-          %h4 DIRECTV
-        .intent-toggle
-          %ul
-            %li Watch on Web
-            %li.inactive Browse for TV
-        /From the right
-        .secondary-controls 
-          %ul
-            %li Help
-            %li Settings
-            %li My Account
-  .main-nav
-    .wrapper
-      %nav
-        %ul.main-nav-list
-          %li Home
-          %li Watchlist
-          %li Movies
-          %li Shows
-          %li Webisodes
-          %li Music
-          %li Live
-      .search-header
-        %input{:type =>'search'}
+%header.site-header
+  .wrapper
+    .logo
+      %h3 Pattern Library
+    %nav
+      %ul.header-nav
+        %li
+          %a{:href => "styles.html"} styles
+        %li
+          %a{:href => "elements.html"} elements
+        %li
+          %a{:href => "components.html"} components
+        %li
+          %a{:href => "modules.html"} modules
+        %li
+          %a{:href => "templates.html"} templates
+
