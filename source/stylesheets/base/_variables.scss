@@ -6,6 +6,7 @@ $header-font-family: $serif;
 
 // Sizes
 $base-font-size: 1em;
+$base-font-size-mobile: 0.85em;
 $base-line-height: $base-font-size * 1.5;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
 $header-line-height: $base-font-size * 1.25;
@@ -29,6 +30,16 @@ $light-green: #E6EFC2;
 $red: #e32728;
 $orange: #F2784B;
 $dark-orange: #A54E2D;
+
+$cmf-blue: #0095B0;
+$cmf-light-blue: #21B4CF;
+$cmf-dark-blue: #005F70;
+
+$cmf-gray-1: #E9EDED;
+$cmf-gray-2: #D3DADB;
+$cmf-gray-3: #98A1A3;
+
+$cmf-yellow: #EEAE48;
 
 // Background Color
 $base-background-color: white;

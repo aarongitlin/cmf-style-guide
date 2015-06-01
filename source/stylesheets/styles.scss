@@ -30,18 +30,28 @@
 	height: 6em;
 	margin-top: 1em;
 	&.primary.one {
-		background-color: $light-blue;
+		background-color: $cmf-blue;
 	}
 	&.primary.two {
-
+		background-color: $cmf-light-blue;
 	}
 	&.primary.three {
+		background-color: $cmf-dark-blue;
 	}
 }
-.secondary-colors {
+#secondary-colors {
 	@include span-columns(8);
 	@include shift(2);
 	@include omega();
+	.secondary.one {
+		background-color: $cmf-gray-1;
+	}
+	.secondary.two {
+		background-color: $cmf-gray-2;
+	}
+	.secondary.three {
+		background-color: $cmf-gray-3;
+	}
 }
 .color-secondary {
 	@include span-columns(2);

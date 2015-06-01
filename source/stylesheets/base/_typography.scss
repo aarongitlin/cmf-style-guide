@@ -5,6 +5,9 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $unitless-line-height;
+  @include media($mobile-only) {
+    font-size: $base-font-size-mobile;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,29 +17,6 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
-h1 {
-  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
-}
-
-h2 {
-  font-size: $base-font-size * 2; // 16 * 2 = 32px
-}
-
-h3 {
-  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
-}
-
-h4 {
-  font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
-}
-
-h5 {
-  font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
-}
-
-h6 {
-  font-size: $base-font-size;
-}
 
 p {
   margin: 0 0 ($base-line-height * .5);
@@ -84,4 +64,42 @@ cite {
   &:before {
     content: '\2014 \00A0';
   }
+}
+
+// Typography
+
+
+p {
+  font-family: Verdana, sans-serif;
+  font-size: 1.0em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-family: $serif;
+  font-weight: 300;
+  font-size: 2.4em;
+  line-height: 1.2;
+  @include media($medium-screen-up) {
+    font-size: 3.6em;
+    line-height: 1.4;
+  }
+}
+h2 {
+  font-family: $serif;
+  font-weight: 300;
+  font-size: 2.5em;
+  line-height: 1.5;
+}
+h3 {
+  font-family: $serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.4;
+}
+h4 {
+  font-family: Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 1.2;
 }

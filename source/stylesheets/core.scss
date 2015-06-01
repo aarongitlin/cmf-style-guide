@@ -1,7 +1,9 @@
 @import 'normalize/normalize.css';
 @import 'bourbon/bourbon';
-@import 'base/base';
+@import 'base/grid-settings';
 @import 'neat/neat';
+@import 'base/base';
+
 
 // Prevent stupid page-shift scroll when some pages have scroll bars and others don't
 html {
@@ -12,31 +14,27 @@ html {
 .styles .header-nav li:nth-child(1) {
 	background-color: $light-gray;
 }
-// Elements second:
-.elements .header-nav li:nth-child(2) {
+// Components second:
+.components .header-nav li:nth-child(2) {
 	background-color: $light-gray;
 }
-// Components third:
-.components .header-nav li:nth-child(3) {
-	background-color: $light-gray;
-}
-// Modules fourth:
-.modules .header-nav li:nth-child(4) {
-	background-color: $light-gray;
-}
+
 // Templates fifth:
-.templates .header-nav li:nth-child(5) {
+.templates .header-nav li:nth-child(3) {
 	background-color: $light-gray;
 }
 // Site header
 .site-header {
-	background-color: $off-white;
+	background-color: $cmf-blue;
 	box-shadow: 0 0px 12px $light-gray;
 }
 .logo {
-	@include span-columns(4);
+	@include span-columns(2 of 2);
+	@include media($medium-screen-up) {
+		@include span-columns(3 of 12);
+	}
 	margin-top: 0.5em;
-	color: $dark-gray;
+	color: $off-white;
 	h3 {
 		font-weight: 100;
 	}
@@ -65,7 +63,7 @@ html {
 // Basic structural elements
 .wrapper {
 	@include outer-container;
-	@include padding(1em);
+	@include padding(0 1em);
 	@include media($max-screen-up) {
 		@include padding(0em);
 	}
@@ -92,10 +90,6 @@ section {
 	background-color: $light-gray;
 }
 
-
-
-
-
 //Footer
 
 footer {
@@ -109,4 +103,67 @@ footer {
 	margin-top: 1em;
 	margin-bottom: 1em;
 	opacity: 0.75;
+}
+
+// Component Header
+
+.component-header {
+ 
+ header, .header-wrapper {
+    background-color: $cmf-light-blue;
+    margin-bottom: 1em;
+    @include media($medium-screen-up) {
+		  height: 380px;
+      margin-bottom: 0;
+    }
+  }
+  .title {
+    color: $white;
+    @include padding(0.5em 0);
+    @include media ($medium-screen-up) {
+      @include span-columns(8.5);
+      padding-top: 10%;
+    }
+
+  }
+  .header-card {
+    @include media ($medium-screen-up) {
+      @include span-columns(3.3);
+      float: right;
+      @include omega();
+      position: relative;
+      top: 8em;
+      right: 1em;
+    }
+    max-width: 36em;
+    margin: auto;
+    background-color: $white;
+    height: 18em;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em rgba(0,0,0,0.25);
+    border-top: 1em solid $cmf-yellow;
+  }
+  .card-title {
+    text-align: center;
+    padding-top: 1em;
+  }
+  .card-button-group {
+    padding-top: 1em;
+    text-align: center;
+    button {
+      width: 80%;
+      &:nth-child(n+2) {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .secondary-action-bar {
+    background-color: $cmf-gray-1;
+    height: 3em;
+    padding-top: 0.75em;
+    border-top: 1px solid $cmf-gray-2;
+    border-bottom: 1px solid $cmf-gray-2;
+  }
+
 }
