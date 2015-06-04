@@ -1,3 +1,9 @@
+
+##
+A middleman template using Bourbon and Neat. 
+Once you have Ruby and middleman installed, you should be able to clone this repo, do a bundle install, and get running. Put middleman server into your terminal to start the server.
+
+
 ## middleman-template
 
 A middleman template just for me. Uses Haml, Sass, Bourbon, Neat, Livereload etc. and comes with some examples and settings.
