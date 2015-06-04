@@ -1,0 +1,211 @@
+@import 'normalize/normalize.css';
+@import 'bourbon/bourbon';
+@import 'base/grid-settings';
+@import 'neat/neat';
+@import 'base/base';
+
+
+// Prevent stupid page-shift scroll when some pages have scroll bars and others don't
+html {
+	overflow-y: scroll;
+}
+
+// Add highlight to activated tab. As long as Styles is first element:
+.styles .header-nav li:nth-child(1) {
+	border-top: 8px solid lighten($cmf-light-blue, 10%);
+}
+// Components second:
+.components .header-nav li:nth-child(2) {
+	border-top: 8px solid lighten($cmf-light-blue, 10%);
+}
+
+// Templates fifth:
+.templates .header-nav li:nth-child(3) {
+	border-top: 8px solid lighten($cmf-light-blue, 10%);
+}
+// Site header
+.site-header {
+	background-color: $cmf-blue;
+	box-shadow: 0 0px 12px $light-gray;
+}
+.logo {
+	@include span-columns(2 of 2);
+	@include media($medium-screen-up) {
+		@include span-columns(3 of 12);
+	}
+	margin-top: 0.5em;
+	color: $off-white;
+	h3 {
+		font-weight: 100;
+	}
+}
+.logo-row {
+	@include row();
+	margin-top: 1em;
+	text-align: center;
+}
+
+.header-nav {
+	float: right;
+	li {
+		float: left;
+		padding: 1em 2em;
+		font-weight: 600;
+    border-top: 8px solid transparent;
+		a {
+			color: $white;
+		}
+		&:hover {
+			border-top: 8px solid lighten($cmf-light-blue, 10%);
+		}
+	}
+}
+
+// Basic structural elements
+.wrapper {
+	@include outer-container;
+	@include padding(0 1em);
+	@include media($max-screen-up) {
+		@include padding(0em);
+	}
+}
+.row {
+	@include row();
+}
+section {
+	padding-top: 1em;
+}
+.section-heading {
+	border-bottom: 1px solid $light-gray;
+}
+
+.heading-divider {
+	border-bottom: 3px solid #333;
+	@include margin (1em null 1em null);
+	@include padding (0.2em null 0.2em null);
+}
+
+// Styles
+
+.light-gray-container {
+	background-color: $light-gray;
+}
+
+//Footer
+
+footer {
+	border-top: 1px solid $light-gray;
+	padding-top: 2em;
+	margin-top: 3em;
+	text-align: center;
+}
+
+.copyright {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	opacity: 0.75;
+}
+//Components
+[class*="component-"]  {
+  margin-top: 2em;
+}
+// Component Header
+
+.component-header {
+  background-color: $cmf-light-blue;
+  
+ .header-wrapper {
+    background-color: $cmf-light-blue;
+    margin-bottom: 1em;
+    @include media($medium-screen-up) {
+		  height: 380px;
+      margin-bottom: 0;
+    }
+  }
+  .header-wrapper {
+    @include outer-container;
+  }
+  .title {
+    color: $white;
+    @include padding(0.5em 0);
+    @include media ($medium-screen-up) {
+      @include span-columns(8.5);
+      padding-top: 10%;
+    }
+
+  }
+  .header-card {
+    @include media ($medium-screen-up) {
+      @include span-columns(3.3);
+      float: right;
+      @include omega();
+      position: relative;
+      top: 8em;
+      right: 1em;
+    }
+    max-width: 36em;
+    margin: auto;
+    background-color: $white;
+    height: 18em;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em rgba(0,0,0,0.25);
+    border-top: 1em solid $cmf-yellow;
+  }
+  .card-title {
+    text-align: center;
+    padding-top: 1em;
+  }
+  .card-button-group {
+    padding-top: 1em;
+    text-align: center;
+    button {
+      width: 80%;
+      &:nth-child(n+2) {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .card-secondary-links {
+    margin-top: 2em;
+    text-align: center;
+  }
+  a.card-link {
+    
+  }
+
+  .secondary-action-bar {
+    background-color: $cmf-gray-1;
+    height: 3em;
+    padding-top: 0.75em;
+    border-top: 1px solid $cmf-gray-2;
+    border-bottom: 1px solid $cmf-gray-2;
+  }
+
+}
+
+.third-promo-item {
+  text-align: center;
+  margin-top: 2em;
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  @include fill-parent;
+  @include media($medium-screen-up) {
+    @include span-columns(4);
+    margin-top: 0;
+  }
+}
+.third-promo-item-icon {
+  width: 6em;
+  height: 6em;
+  background-color: $cmf-blue;
+  border-radius: 3em;
+  margin: auto;
+}
+.third-promo-item-title {
+  padding-top: 1em;
+}
+.third-promo-item-content {
+  padding-top: 1em;
+}
