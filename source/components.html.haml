@@ -3,19 +3,34 @@ title: Pattern Library Components
 body_class: components
 ---
 
-%section.component-header
+%section
   .wrapper
     .section-heading
       %h3 header
       %p a general page header
-  %header
-    .wrapper.header-wrapper
+  .component-header
+    .header-wrapper
       %h1.title Heading Title Goes Here
       .header-card 
         %h3.card-title Card Title here
         .card-button-group
           %button.primary-button Primary Button
           %button.secondary-button Secondary Button
+        .card-secondary-links
+          %a.card-link Secondary card link here
     .secondary-action-bar 
       .wrapper
         %a{:href=>"#"} extra link here >
+
+%section
+  .wrapper
+    .section-heading
+      %h3 Three Point Promo
+      %p A reusable promo with 3 icons titles and descriptions
+  .wrapper.component-three-point-promo
+    - 3.times do |n|
+      .third-promo-item
+        .third-promo-item-icon
+        %h3.third-promo-item-title Promo Item Title
+        .third-promo-item-content 
+          Mercedem aut nummos unde unde extricat, amaras. Quae vero auctorem tractata ab fiducia dicuntur. Quam temere in vitiis, legem sancimus haerentia. Quae vero auctorem tractata ab fiducia dicuntur.

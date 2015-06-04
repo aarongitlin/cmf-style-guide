@@ -1,5 +1,5 @@
 // Typography
-$sans-serif: $helvetica;
+$sans-serif: $verdana;
 $serif: $georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $serif;
@@ -35,9 +35,13 @@ $cmf-blue: #0095B0;
 $cmf-light-blue: #21B4CF;
 $cmf-dark-blue: #005F70;
 
-$cmf-gray-1: #E9EDED;
-$cmf-gray-2: #D3DADB;
-$cmf-gray-3: #98A1A3;
+
+$cmf-gray-1: #F2F5F5;
+$cmf-gray-2: #E9EDED;
+$cmf-gray-3: #D3DADB;
+$cmf-gray-4: #98A1A3;
+$cmf-gray-5: #676D6E;
+$cmf-gray-6: #393C3C;
 
 $cmf-yellow: #EEAE48;
 
@@ -45,12 +49,12 @@ $cmf-yellow: #EEAE48;
 $base-background-color: white;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$base-accent-color: $deep-blue;
+$base-font-color: $cmf-gray-6;
+$base-accent-color: $cmf-dark-blue;
 
 // Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$hover-link-color: lighten($base-accent-color, 15);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 

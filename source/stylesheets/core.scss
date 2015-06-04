@@ -12,16 +12,16 @@ html {
 
 // Add highlight to activated tab. As long as Styles is first element:
 .styles .header-nav li:nth-child(1) {
-	background-color: $light-gray;
+	border-top: 8px solid lighten($cmf-light-blue, 10%);
 }
 // Components second:
 .components .header-nav li:nth-child(2) {
-	background-color: $light-gray;
+	border-top: 8px solid lighten($cmf-light-blue, 10%);
 }
 
 // Templates fifth:
 .templates .header-nav li:nth-child(3) {
-	background-color: $light-gray;
+	border-top: 8px solid lighten($cmf-light-blue, 10%);
 }
 // Site header
 .site-header {
@@ -51,11 +51,12 @@ html {
 		float: left;
 		padding: 1em 2em;
 		font-weight: 600;
+    border-top: 8px solid transparent;
 		a {
-			color: $dark-gray;
+			color: $white;
 		}
 		&:hover {
-			background-color: $light-gray;
+			border-top: 8px solid lighten($cmf-light-blue, 10%);
 		}
 	}
 }
@@ -104,18 +105,25 @@ footer {
 	margin-bottom: 1em;
 	opacity: 0.75;
 }
-
+//Components
+[class*="component-"]  {
+  margin-top: 2em;
+}
 // Component Header
 
 .component-header {
- 
- header, .header-wrapper {
+  background-color: $cmf-light-blue;
+  
+ .header-wrapper {
     background-color: $cmf-light-blue;
     margin-bottom: 1em;
     @include media($medium-screen-up) {
 		  height: 380px;
       margin-bottom: 0;
     }
+  }
+  .header-wrapper {
+    @include outer-container;
   }
   .title {
     color: $white;
@@ -158,6 +166,14 @@ footer {
     }
   }
 
+  .card-secondary-links {
+    margin-top: 2em;
+    text-align: center;
+  }
+  a.card-link {
+    
+  }
+
   .secondary-action-bar {
     background-color: $cmf-gray-1;
     height: 3em;
@@ -166,4 +182,30 @@ footer {
     border-bottom: 1px solid $cmf-gray-2;
   }
 
+}
+
+.third-promo-item {
+  text-align: center;
+  margin-top: 2em;
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  @include fill-parent;
+  @include media($medium-screen-up) {
+    @include span-columns(4);
+    margin-top: 0;
+  }
+}
+.third-promo-item-icon {
+  width: 6em;
+  height: 6em;
+  background-color: $cmf-blue;
+  border-radius: 3em;
+  margin: auto;
+}
+.third-promo-item-title {
+  padding-top: 1em;
+}
+.third-promo-item-content {
+  padding-top: 1em;
 }

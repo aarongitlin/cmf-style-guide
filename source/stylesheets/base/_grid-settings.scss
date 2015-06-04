@@ -12,7 +12,8 @@ $medium-screen: em(640);
 $large-screen: em(860);
 $max-screen: em(1170);
 
-$small-screen-up: new-breakpoint(min-width $small-screen 2);
+$small-screen-up: new-breakpoint(min-width $small-screen 4);
 $medium-screen-up: new-breakpoint(min-width $medium-screen 12);
-$mobile-only: new-breakpoint(max-width $medium-screen 2);
+$mobile-only: new-breakpoint(max-width $medium-screen 4);
+
 $max-screen-up: new-breakpoint(min-width $max-screen 12);
