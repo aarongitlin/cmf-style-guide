@@ -21,7 +21,7 @@ button.primary-button {
 button.secondary-button {
 	background-color: $cmf-yellow;
 	color: $white;
-	padding: 0.9em 1em;
+	padding: 16px 1em;
 	&:hover {
 		background-color: darken($cmf-yellow, 8%);
 	}

@@ -62,7 +62,7 @@ html {
 }
 
 // Basic structural elements
-.wrapper {
+.wrapper, .header-wrapper {
 	@include outer-container;
 	@include padding(0 1em);
 	@include media($max-screen-up) {
@@ -113,7 +113,7 @@ footer {
 
 .component-header {
   background-color: $cmf-light-blue;
-  
+
  .header-wrapper {
     background-color: $cmf-light-blue;
     margin-bottom: 1em;
