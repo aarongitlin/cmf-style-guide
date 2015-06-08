@@ -1,8 +1,20 @@
+
+.input-short {
+  @include fill-parent;
+  @include media($medium-screen-up) {
+    @include span-columns(4 of 8);
+  }
+}
+
 fieldset {
-  background: lighten($base-border-color, 10);
-  border: 1px solid $base-border-color;
   margin: 0 0 ($base-line-height / 2) 0;
-  padding: $base-line-height;
+  border: none;
+  padding: 0;
+  @include fill-parent;
+  @include media($medium-screen-up) {
+    @include span-columns(8);
+    @include shift(2);
+  }
 }
 
 input,
@@ -14,7 +26,8 @@ select {
 }
 
 label {
-  font-weight: bold;
+  font-weight: 300;
+  font-family: $serif;
   margin-bottom: $base-line-height / 4;
 
   &.required:after {
@@ -31,7 +44,7 @@ textarea,
 select[multiple=multiple] {
   @include box-sizing(border-box);
   @include transition(border-color);
-  background-color: white;
+  background-color: $off-white;
   border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;
@@ -76,3 +89,6 @@ select {
   max-width: 100%;
   margin-bottom: $base-line-height;
 }
+
+
+
